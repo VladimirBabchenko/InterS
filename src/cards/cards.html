@@ -1,4 +1,4 @@
-<h2><a ui-sref="cards">Dashboardsss</a></h2>
+<h2><a ui-sref="cards">Dashboards</a></h2>
 <section class="cards">
     <article class="card" ng-repeat="card in cards.cardsList">
         <div class="card-header">
@@ -31,9 +31,9 @@
             </div>
         </div>
         <div class="card-footer">
-            <a ng-click="cards.sayHello()">Hide</a>
+            <a  ng-click="cards.hideBtn($event)" href="">Hide</a>
             <a href="#">Show Details</a>
-            <p ng-click="cards.sayHello()">Hesllo</p>
         </div>
     </article>
 </section>
+<button ng-click="cards.addNewCards()">Show</button>

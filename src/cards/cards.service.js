@@ -5,7 +5,7 @@ function CardsService($http) {
     this.hideCard = function(event) {
         const article = event.target.closest(".card");
         article && article.hidden !== hidden;
-    }
+    };
 }
 
 export default CardsService;
