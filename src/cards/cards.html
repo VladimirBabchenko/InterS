@@ -1,0 +1,39 @@
+<h2><a ui-sref="cards">Dashboardsss</a></h2>
+<section class="cards">
+    <article class="card" ng-repeat="card in cards.cardsList">
+        <div class="card-header">
+            <h3 class="card-header__title">{{card.name}}</h3>
+            <p class="card-header__type">{{card.type}}</p>
+        </div>
+        <div class="card-info">
+            <div class="card-info__block">
+                <div class="card-info__posts  card-inner">
+                    <p>Approved Posts</p>
+                    <p>{{card.approved_posts}}</p>
+                </div>
+                <div class="card-info__influences  card-inner">
+                    <p>Influencers</p>
+                    <p>{{card.num_of_artists}}</p>
+                </div>
+                <div class="card-info__likes  card-inner">
+                    <p>Likes</p>
+                    <p>{{card.approved_likes}}</p>
+                </div>
+                <div class="card-info__comments  card-inner">
+                    <p>Comments</p>
+                    <p>{{card.approved_comments}}</p>
+                </div>
+            </div>
+            <div class="card-progress">
+                <span>{{card.progress}}</span><span>%</span>
+                <span>(</span><span>{{card.days_passed}}</span><span>/</span>
+                <span>{{card.days_total}}</span><span>)</span>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a ng-click="cards.sayHello()">Hide</a>
+            <a href="#">Show Details</a>
+            <p ng-click="cards.sayHello()">Hesllo</p>
+        </div>
+    </article>
+</section>
