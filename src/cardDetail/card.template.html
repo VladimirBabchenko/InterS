@@ -1,6 +1,6 @@
 <h2><a ui-sref="dashboard">Dashboards</a></h2>
 <section class="cards">
-    <article class="card" ng-repeat="card in cards.cardsList">
+    <article class="card" ng-repeat="card in cardDetail.allCards">
         <div class="card-header">
             <h3 class="card-header__title">{{card.name}}</h3>
             <p class="card-header__type">{{card.type}}</p>
@@ -31,12 +31,11 @@
             </div>
         </div>
         <div class="card-footer">
-            <a  ng-click="cards.hideBtn($event)" href="">Hide</a>
-            <a href="#">Show Details</a>
+            <!-- <a  ng-click="cards.hideBtn($event)" href="">Hide</a> -->
+            <a ui-sref="campaignDetails/({id: card.id})">Show Details</a>
         </div>
     </article>
-    <article class="additional">
+    <!-- <article class="additional">
         <a  class="additional-button" href="#" ng-click="cards.addNewCards($event)">More to Show</a>
-    </article>
+    </article> -->
 </section>
-<!-- <button ng-click="cards.addNewCards($event)">Show</button> -->
