@@ -8,7 +8,7 @@ let cardDetailComponent = {
             .then(response => {
                 this.allCards = response.data.campaign;
                 let neededCard = cardService.getId();
-                console.log("sdfsaf");
+                
                 this.card = this.allCards.find(card => card.id === neededCard);
             });
 
