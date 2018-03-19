@@ -9,7 +9,7 @@ function CardsService($http, $state, $stateParams) {
     };
 
     this.getId = function() {
-        return $stateParams.id;
+        return Number($stateParams.id);
     }
 }
 
