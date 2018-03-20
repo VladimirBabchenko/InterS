@@ -1,16 +1,7 @@
-function CardsService($http, $state, $stateParams) {
-    this.getCards = function (url) {
+function CardService($http, $state, $stateParams) {
+    this.getData = function (url) {
         return $http.get(url)
-        // return $http({
-        //     url: url,
-        //     method: "get",
-        //     params: {id: $routeParams.id}
-        // })
     };
-
-    this.getId = function() {
-        return Number($stateParams.id);
-    }
 }
 
-export default CardsService;
+export default CardService;

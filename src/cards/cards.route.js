@@ -18,10 +18,6 @@ function cardsRoutes($stateProvider, $urlRouterProvider, $locationProvider) {
       url: "/giveaway",
       component: "cardsList"
     })
-    // .state("campaignDetails", {
-    //   url: "/campaigns/:id",
-    //   component: "cardDetail"
-    // })
 }
 /* @ngInject */
 export default cardsRoutes;

@@ -3,7 +3,6 @@
     text-transform: uppercase;
     background-color: gainsboro;
 }
-
 .card-detail__title {
     border: 1px solid rgb(192, 192, 192);
     padding: 10px;
@@ -11,7 +10,6 @@
     box-shadow: 2px 2px rgb(170, 170, 170);
     background-color: #fff;
 }
-
 .card-detail {
     background-color: #fff;
     border: 1px solid rgb(192, 192, 192);
@@ -20,16 +18,13 @@
     margin-top: 10px;
     box-shadow: 2px 2px rgb(170, 170, 170);
 }
-
 .card-detail__filters {
     display: flex;
     justify-content: space-between;
 }
-
 .card-detail__tabs {
     margin-top: 20px;
 }
-
 .card-detail__breadcrumps {
     font-size: 0;
     display: flex;
@@ -51,3 +46,32 @@
     font-size: 12px;
     margin-bottom: 0;
 }
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.posts__item {
+    flex-basis: 20%;
+    margin-right: 25px;
+}
+.posts__author-block {
+    display: flex;
+    p {
+        margin-bottom: 0;
+        font-size: 14px;
+        &:first-child {
+            font-weight: bold;
+        }
+    }
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        margin-right: 10px;
+    }
+}
+.post__content {
+    height: 250px;
+}
+

@@ -1,18 +1,25 @@
 import cardHTML from "./card.template.html";
+// import cardService from "../cards/cards.service";
 
 let cardDetailComponent = {
     template: cardHTML,
     controllerAs: "cardDetail",
-    controller: function(cardService) {
-        cardService.getCards("./src/cards/data/cards.json")
+    controller: function (cardService, $stateParams) {
+        var self = this;
+        cardService.getData("./src/cards/data/cards.json")
             .then(response => {
                 this.allCards = response.data.campaigns;
-                let neededCard = cardService.getId();
+                let neededCard = Number($stateParams.id);
                 this.card = this.allCards.find(card => card.id === neededCard);
-                console.log(this.card);
-            });
-            this.keyWords = ["funny", "cocky", "rubbish"];
+            })
+        cardService.getData("./src/cards/data/card-detail.json")
+            .then(response => {
+                this.media = response.data.media;
+                console.log(this.media);
+            });  
+                
+        this.keyWords = ["funny", "cocky", "rubbish"];
     }
-}
+};
 
 export default cardDetailComponent;
