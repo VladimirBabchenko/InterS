@@ -24,7 +24,6 @@ let cardsComponent = {
                         this.cardsList = this.allCards.splice(0, 7);
                 }
             })
-
         this.hideBtn = function (event) {
             const article = event.target.closest(".card");
             article && (article.hidden = !article.hidden);

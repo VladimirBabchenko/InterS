@@ -2,5 +2,4 @@
 /.idea
 dist
 .vscode
-.idea/
 npm-debug.log

@@ -3,6 +3,12 @@
     text-transform: uppercase;
     background-color: gainsboro;
 }
+
+.md-raised.socials.active {
+    background-color: blue;
+    color: #fff;
+}
+
 .card-detail__title {
     border: 1px solid rgb(192, 192, 192);
     padding: 10px;
@@ -49,14 +55,22 @@
 .posts {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .posts__item {
-    flex-basis: 20%;
+    flex-basis: 18%;
     margin-right: 25px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(200, 200, 200, 0.5);
+    border-right: 0;
+    box-shadow: 2px 2px rgba(200, 200, 200, 0.5);
+    &:last-of-type {
+        width: 18%;
+    }
 }
 .posts__author-block {
     display: flex;
+    margin: 10px 10px;
     p {
         margin-bottom: 0;
         font-size: 14px;
@@ -73,5 +87,56 @@
 }
 .post__content {
     height: 250px;
+    display: flex;
+    margin-top: 15px;
+    p {
+        margin: auto 25px;
+        font-size: 14px;
+        color: #fff;
+        text-shadow: 1px 1px black;
+        word-wrap: break-word;
+    }
 }
+.post__counter {
+    display: flex;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+    div {
+        flex-basis: 40%;
+        padding-left: 10px;
+
+    }
+    div span {
+        display: block;
+        font-size: 13px;
+        &:last-child {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+}
+.post__destination {
+    display: flex;
+    justify-content: flex-start;
+    a {
+        margin: 10px 10px;
+        text-transform: uppercase;
+        &:first-child {
+            margin-right: 30px;
+            color: grey;
+        }
+        &:last-child {
+            color: blue;
+        }
+    }
+}
+.btn {
+    font-size: 14px;
+    &:hover {
+        transition: 300ms;
+        transform: translate(1px, -1px);
+    }
+}
+
 
